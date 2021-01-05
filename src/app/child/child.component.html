@@ -1,0 +1,27 @@
+
+<fieldset class="scheduler-border">
+    <legend class="scheduler-border">Child Component:</legend>
+    <div class="container">
+        <div class="text-left">Message receive from Parent component is <strong style="color:red">{{parentToChildMsg}}</strong>.</div><br>
+        <div class="control-group">
+            <div class="controls bootstrap-timepicker">
+                <input #newItem name="newItem" placeholder="Enter Message" value="{{message}}" size="50"/>
+                <i class="icon-time"></i>
+            </div><br>
+            <button (click)="sendMsgToParent(newItem.value)">Send Message to Parent Component</button>
+        </div>
+    </div>
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
