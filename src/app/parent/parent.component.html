@@ -1,25 +1,23 @@
 
-<fieldset class="scheduler-border">
-  <legend class="scheduler-border">Parent Component:</legend>
-  <div class="container">
-    
-    <div class="control-group">
-      <div class="controls bootstrap-timepicker">
-        <input #parentToChild name="parentToChild" placeholder="Enter Message" value="{{parentToChildMsg}}" size="50"/>
-        <i class="icon-time"></i>
+<div class="container">
+  <fieldset class="scheduler-border">
+    <legend class="scheduler-border">Parent Component:</legend>
+      <div class="control-group">
+        <div class="controls bootstrap-timepicker">
+          <input #parentToChild name="parentToChild" placeholder="Enter Message" value="{{parentToChildMsg}}" size="50"/>
+          <i class="icon-time"></i>
+        </div><br>
+        <button (click)="sendMsgToChild(parentToChild.value)">Send Message to Child Component</button>
       </div><br>
-      <button (click)="sendMsgToChild(parentToChild.value)">Send Message to Child Component</button>
-    </div><br>
-    <div class="text-left">Message receive from Child component <strong style="color:blue">{{childToParentMsg}}</strong>.</div>
+      <div class="text-left">Message receive from Child component <strong style="color:blue">{{childToParentMsg}}</strong>.</div>
+  </fieldset>
+
+
+  <app-child [parentToChild]="parentToChildMsg"  (childToParent)="childToParent($event)"></app-child>
+
+  <div>You can download complete code for this example from GitHub <a href="https://github.com/idealwebtutor/DataSharingInAngularComponent.git">Data Sharing In Angular Component</a>.
   </div>
-  
-</fieldset>
-
-
-<app-child [parentToChild]="parentToChildMsg"  (childToParent)="childToParent($event)"></app-child>
-
-
-
+</div>
 
 
 

@@ -3,7 +3,7 @@
     <title>Data Sharing between components</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
   </head>
   <body>
     <!-- <div class="navbar navbar-inverse navbar-fixed-top">
@@ -28,22 +28,15 @@
     </div> -->
     
     <div class="container">
-      <h1>Sharing data between angular component</h1>
-      <!-- <div class="row">
-        <div class="col-sm">
-          One of three columns
-        </div>
-        <div class="col-sm">
-          One of three columns
-        </div>
-        <div class="col-sm">
-          One of three columns
-        </div>
-        <div class="span6">.dhghdrghdrhgdrhgrhgdrihgir..</div>
-        <div class="span6">..sgkhrsg rihgirdrhgirgidgidfhgidhgidfhgi.</div>
-      </div> -->
+      <div class="jumbotron text-center">
+        <h1>Data Sharing in component</h1>
+        
+      </div>
+      <p>We have created two components one is parent and other is child component. When user will enter a message in parent component text box and click on a button to send that message to child component then the same message will be display in child component and when user will enter message in child component text box then on clicking on a button the message is pass to parent component and message is started to display.</p> 
+        
       <app-parent></app-parent>
+      <button (click)="backClicked()" *ngIf="this.isBackAvailable()"> << Go Back</button>
     </div>
-
+    
   </body>
 </html>
